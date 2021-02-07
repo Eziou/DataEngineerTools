@@ -12,6 +12,11 @@
             <p class="lead">
                 <button class="btn btn-lg btn-secondary fw-bold border-white bg-white" type="submit">Search</button>
             </p>
+            {% if verify==1 %}
+            <p>
+                No result!
+            </p>
+            {% endif %}
         </div>
     </form>
 </main>

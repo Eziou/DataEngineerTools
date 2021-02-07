@@ -3,13 +3,15 @@
 
 <h1>Category</h1>
 <ul>
-    {% for channel in categories %}
-        <li class="url">
-            <a href="/anchor-list?uid={{ channel }}">
-                {# <img src=""> #}
-                {{ channel }}
-            </a>
-        </li>
+    {% for dict in categories %}
+        {% for key, value in dict.items() %}
+            <li class="url">
+                <a href="https://www.twitch.tv/directory/game/{{ value }}">
+                    {# <img src=""> #}
+                    {{ key }}
+                </a>
+            </li>
+        {% endfor %}
     {% endfor %}
 </ul>
 {% endblock %}
