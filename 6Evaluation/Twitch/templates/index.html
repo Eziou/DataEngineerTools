@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<main class="px-3">
+    <h1>Twitch</h1>
+    <p class="lead">You can find lots of information related to Twitch here</p>
+    <form role="search" class="search-bar" action="search" method="get">
+        <div class="form-group">
+            <input type="search" name="key" placeholder="    Search" aria-label="Search"
+                   class="input">
+            {#  <input type="hidden" name="page" alue="1"> #}
+            <p></p>
+            <p class="lead">
+                <button class="btn btn-lg btn-secondary fw-bold border-white bg-white" type="submit">Search</button>
+            </p>
+            {% if verify==1 %}
+            <p>
+                No result!
+            </p>
+            {% endif %}
+        </div>
+    </form>
+</main>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Category</h1>
+<ul>
+    {% for dict in categories %}
+        {% for key, value in dict.items() %}
+            <li class="url">
+                <a href="https://www.twitch.tv/directory/game/{{ value }}">
+                    {# <img src=""> #}
+                    {{ key }}
+                </a>
+            </li>
+        {% endfor %}
+    {% endfor %}
+</ul>
+{% endblock %}
