@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Introduction</th>
+        <th>Followers</th>
+        <th>Watch</th>
+        <th>Link</th>
+    </tr>
+</table>
+<table>
+{% for anchor in list %}
+    <tr>
+        <th>
+            {{ anchor.firstname }}
+        </th>
+        <th>
+            {{ anchor.lastname }}
+        </th>
+        <th>
+            {{ anchor.position }}
+        </th>
+        <th>
+            {{ anchor.gender }}
+        </th>
+        <th>
+            <a href="{{ anchor.age }}">{{ anchor.age }}</a>
+        </th>
+    </tr>
+{% endfor %}
+</table>
+{% endblock %}
